@@ -1,0 +1,35 @@
+{
+  "name": "workshop-protractor",
+  "version": "1.0.0",
+  "description": "This is a Workshop about protractor",
+  "main": "index.js",
+  "scripts": {
+    "clean": "RMDIR /Q/S dist",
+    "build": "npm run clean && tsc",
+    "test": "npm run build && protractor dist/local.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snover80/protractor-workshop-2020.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "protractor"
+  ],
+  "author": "Cristian Velandia snover80@gmail.com snover80",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snover80/protractor-workshop-2020/issues"
+  },
+  "homepage": "https://github.com/snover80/protractor-workshop-2020#readme",
+  "dependencies": {
+    "protractor": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/jasminewd2": "^2.0.8",
+    "@types/node": "^13.9.1",
+    "typescript": "^3.8.3"
+  }
+}
