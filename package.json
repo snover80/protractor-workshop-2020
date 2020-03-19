@@ -8,8 +8,9 @@
     "build": "npm run clean && tsc",
     "test:local": "npm run build && protractor dist/protractor/local.config.js",
     "test:headless": "npm run build && protractor dist/protractor/headless.config.js",
-    "test": "npm run test:headless",
-    "postinstall": "webdriver-manager update --gecko false"
+    "test": "npm run lint && npm run test:headless",
+    "postinstall": "webdriver-manager update --gecko false",
+    "lint": "tslint --project tsconfig.json protractor/**/*.ts test/**/*.ts src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,8 @@
   "devDependencies": {
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "^13.9.1",
+    "tslint": "^6.1.0",
+    "tslint-config-airbnb": "^5.11.2",
     "typescript": "^3.8.3"
   }
 }
