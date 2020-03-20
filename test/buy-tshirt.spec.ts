@@ -28,37 +28,37 @@ describe('Buy a t-shirt', () => {
     const orderSummaryPage: OrderSummaryPage = new OrderSummaryPage();
 
     await browser.get('http://automationpractice.com/');
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await menuContentPage.goToTShirtMenu();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await productListPage.selectTshirt();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await productAddedModalPage.clickProceedToCheckout();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await summaryStepPage.clickProceedToCheckout();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await signInPage.login('aperdomobo@gmail.com', 'WorkshopProtractor');
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await addressStepPage.clickProceedToCheckout();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await shippingStepPage.clickTermsAndConditions();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await shippingStepPage.clickProceedToCheckout();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await paymentStepPage.clickPayByBankWire();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await bankPaymentStepPage.clickIConfirmMyOrder();
-    await(browser.sleep(3000));
+    await(browser.sleep(5000));
 
     await expect(orderSummaryPage.getOrderConfirmation())
       .toBe('Your order on My Store is complete.');
