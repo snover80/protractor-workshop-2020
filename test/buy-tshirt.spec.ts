@@ -11,10 +11,6 @@ import { MenuContentPage,
   ProductListPage } from '../src/pages';
 
 describe('Buy a t-shirt', () => {
-  beforeEach(() => {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
-  });
-
   it('then should be bought a t-shirt', async () => {
     const menuContentPage: MenuContentPage = new MenuContentPage();
     const productListPage: ProductListPage = new ProductListPage();
@@ -28,37 +24,26 @@ describe('Buy a t-shirt', () => {
     const orderSummaryPage: OrderSummaryPage = new OrderSummaryPage();
 
     await browser.get('http://automationpractice.com/');
-    await(browser.sleep(5000));
 
     await menuContentPage.goToTShirtMenu();
-    await(browser.sleep(5000));
 
     await productListPage.selectTshirt();
-    await(browser.sleep(5000));
 
-    await productAddedModalPage.clickProceedToCheckout();
-    await(browser.sleep(5000));
+    await productAddedModalPage.clickProceedToCheckoutPA();
 
-    await summaryStepPage.clickProceedToCheckout();
-    await(browser.sleep(5000));
+    await summaryStepPage.clickProceedToCheckoutSP();
 
     await signInPage.login('aperdomobo@gmail.com', 'WorkshopProtractor');
-    await(browser.sleep(5000));
 
-    await addressStepPage.clickProceedToCheckout();
-    await(browser.sleep(5000));
+    await addressStepPage.clickProceedToCheckoutAP();
 
     await shippingStepPage.clickTermsAndConditions();
-    await(browser.sleep(5000));
 
-    await shippingStepPage.clickProceedToCheckout();
-    await(browser.sleep(5000));
+    await shippingStepPage.clickProceedToCheckoutSPP();
 
     await paymentStepPage.clickPayByBankWire();
-    await(browser.sleep(5000));
 
     await bankPaymentStepPage.clickIConfirmMyOrder();
-    await(browser.sleep(5000));
 
     await expect(orderSummaryPage.getOrderConfirmation())
       .toBe('Your order on My Store is complete.');
