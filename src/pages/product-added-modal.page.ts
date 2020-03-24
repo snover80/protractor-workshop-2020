@@ -7,7 +7,7 @@ export class ProductAddedModal {
     this.proceedToCheckOutButton = $('[style*="display: block;"] .button-container > a');
   }
 
-  public async clickProceedToCheckout(): Promise<void> {
+  public async clickProceedToCheckoutPA(): Promise<void> {
     await this.proceedToCheckOutButton.click();
   }
 }

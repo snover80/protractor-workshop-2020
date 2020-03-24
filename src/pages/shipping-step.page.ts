@@ -13,7 +13,7 @@ export class ShippingStepPage {
     await this.termsAndConditionsCheckBox.click();
   }
 
-  public async clickProceedToCheckout(): Promise<void> {
+  public async clickProceedToCheckoutSPP(): Promise<void> {
     await this.proceedToCheckOutButton.click();
   }
 }

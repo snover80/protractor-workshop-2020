@@ -8,7 +8,7 @@ export class SignInPage {
   constructor () {
     this.email = $('#email');
     this.password = $('#passwd');
-    this.logInButton = $('#SubmitLogin > span');
+    this.logInButton = $('#SubmitLogin');
   }
 
   public async setEmail(emailP : string): Promise<void> {
@@ -23,9 +23,9 @@ export class SignInPage {
     await this.logInButton.click();
   }
 
-  public async login(emailP: string, passwordP : string): Promise<void> {
-    this.setEmail(emailP);
-    this.setPassword(passwordP);
-    this.clickLoginButton();
+  public async login(emailP1: string, passwordP1 : string): Promise<void> {
+    await this.setEmail(emailP1);
+    await this.setPassword(passwordP1);
+    await this.clickLoginButton();
   }
 }

@@ -7,7 +7,7 @@ export class AddressStepPage {
     this.proceedToCheckOutButton = $('#center_column > form > p > button > span');
   }
 
-  public async clickProceedToCheckout(): Promise<void> {
+  public async clickProceedToCheckoutAP(): Promise<void> {
     await this.proceedToCheckOutButton.click();
   }
 }

@@ -7,7 +7,7 @@ export class SummaryStepPage {
     this.proceedToCheckOutButton = $('.cart_navigation span');
   }
 
-  public async clickProceedToCheckout(): Promise<void> {
+  public async clickProceedToCheckoutSP(): Promise<void> {
     await this.proceedToCheckOutButton.click();
   }
 }
