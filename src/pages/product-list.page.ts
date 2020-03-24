@@ -5,7 +5,7 @@ export class ProductListPage {
   private productCard: ElementFinder;
 
   constructor () {
-    this.addToCartButton = $('#center_column a.button.ajax_add_to_cart_button.btn.btn-default');
+    this.addToCartButton = $('div.button-container > a[title="Add to cart"]');
     this.productCard = $('.product-container');
   }
 

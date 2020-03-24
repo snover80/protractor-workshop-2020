@@ -4,7 +4,7 @@ export class ProductAddedModal {
   private proceedToCheckOutButton: ElementFinder;
 
   constructor () {
-    this.proceedToCheckOutButton = $('[style*="display: block;"] .button-container > a');
+    this.proceedToCheckOutButton = $('#layer_cart a[title="Proceed to checkout"]');
   }
 
   public async clickProceedToCheckoutPA(): Promise<void> {
