@@ -8,3 +8,4 @@ export { ShippingStepPage } from './shipping-step.page';
 export { SignInPage } from './sign-in-step.page';
 export { SummaryStepPage } from './summary-step.page';
 export { ProductListPage } from './product-list.page';
+export { PersonalInformationPage } from './personal-information.page';
