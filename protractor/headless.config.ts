@@ -9,7 +9,7 @@ export const config: Config = {
   capabilities: {
     browserName: 'chrome',
     chromeOptions: {
-      args: ['--disable-popup-blocking', '--no-default-browser-check', '--start-maximixed', '--headless'],
+      args: ['--disable-popup-blocking', '--no-default-browser-check', '--start-maximized', '--headless'],
       prefs: { credentials_enable_service: false }
     }
   },
